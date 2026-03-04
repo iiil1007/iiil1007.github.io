@@ -13,9 +13,9 @@
         }
 
         body {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            width: 100%;
+            margin: 0;
+            padding: 40px 50px;
             line-height: 1.6;
             color: #333;
             background-color: #f8f9fa;
@@ -25,6 +25,21 @@
             margin-bottom: 40px;
             padding-bottom: 20px;
             border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #eee;
+        }
+
+        .header-info {
+            flex: 1;
         }
 
         .header h1 {
@@ -39,12 +54,12 @@
             margin-top: 10px;
         }
 
-        .header .contact a {
-            color: #007bff;
+        .header .contact a, .project p a {
+            color: #2c3e50;
             text-decoration: none;
         }
 
-        .header .contact a:hover {
+        .header .contact a:hover, .project p a:hover {
             text-decoration: underline;
         }
 
@@ -56,7 +71,7 @@
             font-size: 1.5rem;
             margin-bottom: 15px;
             color: #2c3e50;
-            border-left: 4px solid #007bff;
+            border-left: 4px solid #2c3e50;
             padding-left: 10px;
         }
 
@@ -76,21 +91,29 @@
 
         .project {
             margin-bottom: 15px;
-            padding: 10px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 0;
+            background-color: transparent;
+            border-radius: 0;
+            box-shadow: none;
         }
 
         .project h3 {
             font-size: 1.2rem;
             margin-bottom: 5px;
-            color: #007bff;
+            color: #2c3e50;
         }
 
         @media (max-width: 600px) {
             body {
-                padding: 20px 10px;
+                padding: 20px 20px;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .avatar {
+                width: 80px;
+                height: 80px;
             }
             .header h1 {
                 font-size: 1.8rem;
@@ -103,10 +126,14 @@
 </head>
 <body>
     <div class="header">
-        <h1>iiil1007</h1>
-        <p>个人主页 / Personal Homepage</p>
-        <div class="contact">
-            邮箱：iiil1007@qq.com | GitHub：<a href="https://github.com/iiil1007" target="_blank">github.com/iiil1007</a>
+        <!-- 替换为你上传的relief.jpg原始链接 -->
+        <img src="https://raw.githubusercontent.com/iiil1007/iiil1007.github.io/main/relief.jpg" alt="个人头像" class="avatar">
+        <div class="header-info">
+            <h1>iiil1007</h1>
+            <p>个人主页 / Personal Homepage</p>
+            <div class="contact">
+                邮箱：iiil1007@qq.com | GitHub：<a href="https://github.com/iiil1007" target="_blank">github.com/iiil1007</a>
+            </div>
         </div>
     </div>
 
@@ -126,27 +153,27 @@
             <p>仓库地址：<a href="https://github.com/iiil1007/iiil1007.github.io" target="_blank">github.com/iiil1007/iiil1007.github.io</a></p>
         </div>
         <div class="project">
-    <h3>项目 2：Python 自动化办公工具集</h3>
-    <p>基于 Python 开发的多场景自动化工具，解决日常办公重复操作问题，支持 Excel 数据处理、PDF 批量转换、邮件自动发送等功能。</p>
-    <p><strong>技术栈：</strong>Python 3.x、openpyxl、PyPDF2、smtplib、tkinter（简易GUI）</p>
-    <p><strong>功能亮点：</strong>1. 一键批量处理上千条 Excel 数据并生成可视化报表；2. 支持 PDF 拆分/合并/加密/解密；3. 可配置化邮件模板，定时发送带附件邮件。</p>
-    <p>仓库地址：<a href="https://github.com/iiil1007/python-auto-office" target="_blank">github.com/iiil1007/python-auto-office</a></p>
+            <h3>项目 2：Python 自动化办公工具集</h3>
+            <p>基于 Python 开发的多场景自动化工具，解决日常办公重复操作问题，支持 Excel 数据处理、PDF 批量转换、邮件自动发送等功能。</p>
+            <p><strong>技术栈：</strong>Python 3.x、openpyxl、PyPDF2、smtplib、tkinter（简易GUI）</p>
+            <p><strong>功能亮点：</strong>1. 一键批量处理上千条 Excel 数据并生成可视化报表；2. 支持 PDF 拆分/合并/加密/解密；3. 可配置化邮件模板，定时发送带附件邮件。</p>
+            <p>仓库地址：<a href="https://github.com/iiil1007/python-auto-office" target="_blank">github.com/iiil1007/python-auto-office</a></p>
         </div>
     </div>
 
     <div class="section">
         <h2>技能 / Skills</h2>
         <ul>
-            <li>前端：HTML5/CSS3、JavaScript、Vue.js/React（可选）</li>
-            <li>后端：Python、Java/Go（可选）、RESTful API 开发</li>
-            <li>工具：Git、GitHub、VS Code、Docker（可选）</li>
+            <li>前端：HTML5/CSS3、JavaScript、Vue.js/React</li>
+            <li>后端：Python、Java/Go、RESTful API 开发</li>
+            <li>工具：Git、GitHub、VS Code、Docker</li>
         </ul>
     </div>
 
     <div class="section">
-    <h2>更多 / More</h2>
-    <p><strong>教育背景 / Education：</strong>海南大学 软件工程 本科 | 2023.09 - 2027.06</p>
-    <p><strong>其他 / Others：</strong>热爱开源，参与多个社区项目维护；持续学习云计算、微服务相关技术。</p>
+        <h2>更多 / More</h2>
+        <p><strong>教育背景 / Education：</strong>海南大学 软件工程 本科 | 2023.09 - 2027.06</p>
+        <p><strong>其他 / Others：</strong>热爱开源，参与多个社区项目维护；持续学习云计算、微服务相关技术。</p>
     </div>
 </body>
 </html>
