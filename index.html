@@ -1,10 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>我的个人主页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yifan Yang - Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .header .contact {
+            color: #666;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .header .contact a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .header .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            border-left: 4px solid #007bff;
+            padding-left: 10px;
+        }
+
+        .section p, .section ul {
+            font-size: 1rem;
+            color: #444;
+            margin-left: 15px;
+        }
+
+        .section ul {
+            list-style-type: disc;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+        }
+
+        .project {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .project h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #007bff;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 10px;
+            }
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            .section h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, GitHub Pages!</h1>
-    <p>这是我的个人主页。</p>
+    <div class="header">
+        <h1>iiil1007</h1>
+        <p>个人主页 / Personal Homepage</p>
+        <div class="contact">
+            邮箱：iiil1007@qq.com | GitHub：<a href="https://github.com/iiil1007" target="_blank">github.com/iiil1007</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>关于我 / About Me</h2>
+        <p>
+            一名热爱编程的开发者，专注于前端/后端开发领域，喜欢探索新技术、解决实际问题。
+            擅长使用 HTML/CSS/JavaScript/Python 等技术栈，拥有开源项目开发和协作经验。
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>项目 / Projects</h2>
+        <div class="project">
+            <h3>项目 1：个人主页模板</h3>
+            <p>基于 HTML/CSS 开发的轻量级个人主页，支持响应式布局，可快速部署到 GitHub Pages。</p>
+            <p>仓库地址：<a href="https://github.com/iiil1007/iiil1007.github.io" target="_blank">github.com/iiil1007/iiil1007.github.io</a></p>
+        </div>
+        <div class="project">
+    <h3>项目 2：Python 自动化办公工具集</h3>
+    <p>基于 Python 开发的多场景自动化工具，解决日常办公重复操作问题，支持 Excel 数据处理、PDF 批量转换、邮件自动发送等功能。</p>
+    <p><strong>技术栈：</strong>Python 3.x、openpyxl、PyPDF2、smtplib、tkinter（简易GUI）</p>
+    <p><strong>功能亮点：</strong>1. 一键批量处理上千条 Excel 数据并生成可视化报表；2. 支持 PDF 拆分/合并/加密/解密；3. 可配置化邮件模板，定时发送带附件邮件。</p>
+    <p>仓库地址：<a href="https://github.com/iiil1007/python-auto-office" target="_blank">github.com/iiil1007/python-auto-office</a></p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>技能 / Skills</h2>
+        <ul>
+            <li>前端：HTML5/CSS3、JavaScript、Vue.js/React（可选）</li>
+            <li>后端：Python、Java/Go（可选）、RESTful API 开发</li>
+            <li>工具：Git、GitHub、VS Code、Docker（可选）</li>
+        </ul>
+    </div>
+
+    <div class="section">
+    <h2>更多 / More</h2>
+    <p><strong>教育背景 / Education：</strong>海南大学 软件工程 本科 | 2023.09 - 2027.06</p>
+    <p><strong>其他 / Others：</strong>热爱开源，参与多个社区项目维护；持续学习云计算、微服务相关技术。</p>
+    </div>
 </body>
 </html>
