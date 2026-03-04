@@ -15,19 +15,20 @@
         body {
             width: 100%;
             margin: 0;
-            padding: 40px 50px;
-            line-height: 1.6;
+            padding: 0;
+            line-height: 1.8;
             color: #333;
-            background-color: #f8f9fa;
+            background-color: #f5f7fa;
         }
 
         .header {
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+            padding: 40px 50px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 20px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .avatar {
@@ -35,7 +36,7 @@
             height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #eee;
+            border: 3px solid #f0f2f5;
         }
 
         .header-info {
@@ -44,72 +45,94 @@
 
         .header h1 {
             font-size: 2.2rem;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 8px;
         }
 
         .header .contact {
             color: #666;
             font-size: 1rem;
-            margin-top: 10px;
         }
 
         .header .contact a, .project p a {
             color: #2c3e50;
             text-decoration: none;
+            font-weight: 500;
         }
 
         .header .contact a:hover, .project p a:hover {
             text-decoration: underline;
+            color: #5bc0de;
         }
 
-        .section {
-            margin-bottom: 30px;
+        .section-container {
+            width: 100%;
+            padding: 30px 50px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-radius: 8px;
         }
 
-        .section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+        .section-container h2 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
             color: #2c3e50;
-            border-left: 4px solid #2c3e50;
-            padding-left: 10px;
+            border-left: 5px solid #5bc0de;
+            padding-left: 15px;
+            font-weight: 600;
         }
 
-        .section p, .section ul {
-            font-size: 1rem;
+        .section-container p, .section-container ul {
+            font-size: 1.05rem;
             color: #444;
-            margin-left: 15px;
+            line-height: 1.8;
         }
 
-        .section ul {
+        .section-container ul {
             list-style-type: disc;
+            padding-left: 25px;
         }
 
-        .section li {
-            margin-bottom: 8px;
+        .section-container li {
+            margin-bottom: 10px;
         }
 
         .project {
-            margin-bottom: 15px;
-            padding: 0;
-            background-color: transparent;
-            border-radius: 0;
-            box-shadow: none;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0f2f5;
+        }
+
+        .project:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
 
         .project h3 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .project p strong {
             color: #2c3e50;
         }
 
         @media (max-width: 600px) {
-            body {
-                padding: 20px 20px;
-            }
             .header {
                 flex-direction: column;
                 align-items: flex-start;
+                padding: 20px 20px;
             }
             .avatar {
                 width: 80px;
@@ -118,15 +141,18 @@
             .header h1 {
                 font-size: 1.8rem;
             }
-            .section h2 {
-                font-size: 1.3rem;
+            .section-container {
+                padding: 20px 20px;
+                border-radius: 4px;
+            }
+            .section-container h2 {
+                font-size: 1.4rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <!-- 替换为你上传的relief.jpg原始链接 -->
         <img src="https://raw.githubusercontent.com/iiil1007/iiil1007.github.io/main/relief.jpg" alt="个人头像" class="avatar">
         <div class="header-info">
             <h1>iiil1007</h1>
@@ -137,7 +163,7 @@
         </div>
     </div>
 
-    <div class="section">
+    <div class="section-container">
         <h2>关于我 / About Me</h2>
         <p>
             一名热爱编程的开发者，专注于前端/后端开发领域，喜欢探索新技术、解决实际问题。
@@ -145,7 +171,7 @@
         </p>
     </div>
 
-    <div class="section">
+    <div class="section-container">
         <h2>项目 / Projects</h2>
         <div class="project">
             <h3>项目 1：个人主页模板</h3>
@@ -161,7 +187,7 @@
         </div>
     </div>
 
-    <div class="section">
+    <div class="section-container">
         <h2>技能 / Skills</h2>
         <ul>
             <li>前端：HTML5/CSS3、JavaScript、Vue.js/React</li>
@@ -170,7 +196,7 @@
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section-container">
         <h2>更多 / More</h2>
         <p><strong>教育背景 / Education：</strong>海南大学 软件工程 本科 | 2023.09 - 2027.06</p>
         <p><strong>其他 / Others：</strong>热爱开源，参与多个社区项目维护；持续学习云计算、微服务相关技术。</p>
